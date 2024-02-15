@@ -1,4 +1,11 @@
 $(document).ready(function () {
+        /**
+     * Actualiza el estilo de los elementos de la página.
+     *
+     * @function
+     * @name actualizarEstilo
+     * @return {void} No devuelve ningún valor.
+     */
     function actualizarEstilo() {
         var numColumnas = Math.floor($(window).width() / $('.contenedor').width());
         $('.contenedor .cuadro-texto').css({
@@ -11,7 +18,14 @@ $(document).ready(function () {
         });
     }
 
-    // Cambios de opacidad al resto de imágenes y cambio de color de fondo de body para focus en el hover
+    /**
+     * Realiza cambios de opacidad al resto de imágenes y cambia el color de fondo del body para el enfoque al pasar el ratón sobre la imagen.
+     *
+     * @function
+     * @name imgFocus
+     * @param {HTMLElement} focusImg - El elemento que ha recibido el enfoque.
+     * @return {void} No devuelve ningún valor.
+     */
     window.imgFocus = function(focusImg) {
         $('.personaje-img').css({
             opacity: 0.5
@@ -24,7 +38,14 @@ $(document).ready(function () {
         });
     };
 
-    // Restablece la apariencia a la inicial
+        /**
+     * Restablece la apariencia inicial, restaurando la opacidad de las imágenes y el color de fondo del body.
+     *
+     * @function
+     * @name imgDeFocus
+     * @param {HTMLElement} focusImg - El elemento que ha perdido el enfoque.
+     * @return {void} No devuelve ningún valor.
+     */
     window.imgDeFocus = function(focusImg) {
         $('.personaje-img').css({
             opacity: 0.8
